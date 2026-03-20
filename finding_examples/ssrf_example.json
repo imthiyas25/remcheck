@@ -1,0 +1,20 @@
+{
+  "finding_id": "FIND-0099",
+  "type": "ssrf_cloud_metadata",
+  "endpoint": "GET /api/v1/fetch",
+  "parameter": "url",
+  "base_url": "https://httpbin.org",
+  "auth": {
+    "type": "bearer",
+    "token": "eyJhbGciOiJSUzI1NiJ9.test"
+  },
+  "baseline": {
+    "status_code": 200,
+    "response_hash": "b9e2cd4f",
+    "response_time_p95": 0.60
+  },
+  "metadata": {
+    "cloud_provider": "aws",
+    "original_payload": "http://169.254.169.254/latest/meta-data/"
+  }
+}

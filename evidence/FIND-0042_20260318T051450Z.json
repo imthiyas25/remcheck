@@ -1,0 +1,136 @@
+{
+  "report_id": "cf1899ac-8097-4cf8-83c5-1d43ade3c944",
+  "finding_id": "FIND-0042",
+  "generated_at": "2026-03-18T05:14:50Z",
+  "engine_version": "0.1.0",
+  "verdict": "REMEDIATION_FAILED",
+  "test_results": [
+    {
+      "test_id": "TC-01",
+      "category": "classic_injection",
+      "payload": "' OR '1'='1",
+      "status_code": 404,
+      "response_time": 1.954,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.954s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-02",
+      "category": "union_based",
+      "payload": "' UNION SELECT NULL,NULL,NULL--",
+      "status_code": 404,
+      "response_time": 2.047,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 2.047s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-03",
+      "category": "boolean_blind_true",
+      "payload": "' AND '1'='1",
+      "status_code": 404,
+      "response_time": 1.682,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.682s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-04",
+      "category": "boolean_blind_false",
+      "payload": "' AND '1'='2",
+      "status_code": 404,
+      "response_time": 1.652,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.652s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-05",
+      "category": "time_based_blind",
+      "payload": "' AND SLEEP(3)--",
+      "status_code": 404,
+      "response_time": 1.838,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.838s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-06",
+      "category": "encoding_bypass",
+      "payload": "%27%20OR%20%271%27%3D%271",
+      "status_code": 404,
+      "response_time": 1.353,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.353s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-07",
+      "category": "second_order",
+      "payload": "admin'--",
+      "status_code": 404,
+      "response_time": 1.859,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.859s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-08",
+      "category": "error_based",
+      "payload": "' AND EXTRACTVALUE(1,CONCAT(0x7e,VERSION()))--",
+      "status_code": 404,
+      "response_time": 1.707,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.707s exceeds 2\u00d7 baseline p95 (0.45s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline a3f1bc9d"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 0,
+    "failed": 8,
+    "inconclusive": 0
+  },
+  "report_hash": "sha256:5f656d834f2749c826b9e35a7a3707a2fd5f25793607393c8db57d8fcd10b032"
+}

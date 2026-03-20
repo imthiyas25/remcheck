@@ -1,0 +1,151 @@
+{
+  "report_id": "66b12520-2527-4da7-bf82-8ca39c89190e",
+  "finding_id": "FIND-0099",
+  "generated_at": "2026-03-18T05:15:57Z",
+  "engine_version": "0.1.0",
+  "verdict": "REMEDIATION_FAILED",
+  "test_results": [
+    {
+      "test_id": "TC-01",
+      "category": "imdsv1_root",
+      "payload": "http://169.254.169.254/latest/meta-data/",
+      "status_code": 404,
+      "response_time": 1.834,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.834s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-02",
+      "category": "imdsv1_credentials",
+      "payload": "http://169.254.169.254/latest/meta-data/iam/security-credentials/",
+      "status_code": 404,
+      "response_time": 1.808,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.808s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-03",
+      "category": "imdsv1_user_data",
+      "payload": "http://169.254.169.254/latest/user-data",
+      "status_code": 404,
+      "response_time": 1.673,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.673s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-04",
+      "category": "imdsv2_token_request",
+      "payload": "http://169.254.169.254/latest/api/token",
+      "status_code": 404,
+      "response_time": 1.833,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.833s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-A1",
+      "category": "ip_encoding_bypass",
+      "payload": "http://0251.0376.0251.0376/latest/meta-data/",
+      "status_code": 404,
+      "response_time": 2.141,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 2.141s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-A2",
+      "category": "decimal_ip_bypass",
+      "payload": "http://2852039166/latest/meta-data/",
+      "status_code": 404,
+      "response_time": 1.5,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.500s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-A3",
+      "category": "ipv6_loopback_bypass",
+      "payload": "http://[::ffff:169.254.169.254]/latest/meta-data/",
+      "status_code": 404,
+      "response_time": 1.881,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.881s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-A4",
+      "category": "redirect_bypass",
+      "payload": "http://httpbin.org/redirect-to?url=http://169.254.169.254/latest/meta-data/",
+      "status_code": 404,
+      "response_time": 1.899,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.899s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    },
+    {
+      "test_id": "TC-A5",
+      "category": "dns_rebind_simulation",
+      "payload": "http://169.254.169.254.xip.io/latest/meta-data/",
+      "status_code": 404,
+      "response_time": 1.47,
+      "response_hash": "12b6b36be9bd52d7",
+      "anomalies": [
+        "BEHAVIORAL: status 404 deviates from baseline 200",
+        "TEMPORAL: 1.470s exceeds 2\u00d7 baseline p95 (0.6s)",
+        "CONTENT: response hash 12b6b36be9bd52d7 deviates from baseline b9e2cd4f"
+      ],
+      "result": "FAIL",
+      "raw_body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check "
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "passed": 0,
+    "failed": 9,
+    "inconclusive": 0
+  },
+  "report_hash": "sha256:0373e377a027f2ab7059ecfff70e1b2382730ceb5a061f47b1224dbb99e7e3ca"
+}
